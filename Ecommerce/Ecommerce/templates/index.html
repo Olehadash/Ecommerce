@@ -1,0 +1,138 @@
+{% extends "template.html" %} {% block content %}
+{% block title %}{% endblock %}
+{% block meta %}
+<meta name="description" content="Get most trending Sunglasses, Eyeglasses for boys & girls. FREE shipping, Cash on Delivery and 10 Days return only at redgingger.com">
+<!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="RedGingger - Shop for Trending Sunglasses">
+<meta itemprop="description" content="Get most trending Sunglasses, Eyeglasses for boys & girls. FREE shipping, Cash on Delivery and 10 Days return only at redgingger.com">
+<meta itemprop="image" content="https://s3.ap-south-1.amazonaws.com/cdn-red/bne3.jpg">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://redgingger.com">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RedGingger - Shop for Trending Sunglasses">
+<meta property="og:description" content="Get most trending Sunglasses, Eyeglasses for boys & girls. FREE shipping, Cash on Delivery and 10 Days return only at redgingger.com">
+<meta property="og:image" content="https://s3.ap-south-1.amazonaws.com/cdn-red/bne3.jpg">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shop for Trending Sunglasses">
+<meta name="twitter:description" content="Get most trending Sunglasses, Eyeglasses for boys & girls. FREE shipping, Cash on Delivery and 10 Days return only at redgingger.com">
+<link rel="stylesheet" href="{{ url_for('static', filename='user/css/stylesource.css') }}" />
+{% endblock %}
+<div class="cast-container banner"style="padding: 0 4%">
+    <div class="card card-image" style="position:relative">
+        {% for link in links %}
+        
+        <img src="/product_images?image={{link.link}}" alt="" class="mySlides">
+        {% endfor %}
+    </div>
+</div>
+
+<div style="padding: 0 4%">
+    <nav class="navbar navbar-expand-lg navbar-light" style="text-align:right">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ url_for('index') }}">All</a>
+                </li>
+                {% for category in categories %}
+                {%if category.categoryID == 0 and category.id != 1%}
+                {% if category.isSub == 1 %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="{{category.categoryName}}" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{category.categoryName}}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        {% for categ in categories %}
+                        {%if categ.categoryID == category.id%}
+                        <a class="dropdown-item" href="{{ url_for('index_id', id=categ.id) }}">{{categ.categoryName}}</a>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('index_id', id=category.id) }}">{{category.categoryName}}</a>
+                    {% endif %}
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="products p-grid" style="padding: 0 4%">
+    {% for item in products %}
+    <div class="p-grid-item" style="border-radius: 10px;">
+        <a href="{{ url_for('product_index', name=item.title) }}">
+            <div class="card">
+                <div class="item-price" style="width:100%">
+                    <div class="left">
+
+                    </div>
+                    {% if item.actual_price and item.off_percent %}
+                    <div style="position: absolute;
+        top: 150%;
+        right:10%;
+        transform: translate(50%,-50%);
+        text-transform: uppercase;
+        font-family: verdana;
+        font-size: 35px;
+        font-weight: 700;
+        color: #FFD733;
+        text-shadow: 1px 1px 1px #CAA714, 1px 2px 1px #CAA714, 1px 3px 1px #CAA714, 1px 4px 1px #CAA714, 1px 5px 1px #CAA714, 1px 6px 1px #CAA714, 1px 7px 1px #CAA714, 1px 8px 1px #CAA714, 1px 9px 1px #CAA714, 1px 10px 1px #CAA714, 1px 18px 6px rgba(16,16,16,0.4), 1px 22px 10px rgba(16,16,16,0.2), 1px 25px 35px rgba(16,16,16,0.2), 1px 30px 60px rgba(16,16,16,0.4);
+   ">
+                        -{{ item.off_percent }}%
+                    </div>
+                    {%endif%}
+                    <div class="right">
+                        <span style="background-color:chocolate">$. {{ item.buy_price }}</span>
+
+                    </div>
+                </div>
+                <img src="/product_images?image={{item.image_2}}" alt="{{item.name}}">
+                <div class="product-details" style="background-color:chocolate">
+                    <p>{{item.name}}</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    {% else %}
+    <p style="text-align:center; width: 100%">{{localization.nocards}}</p>
+    {% endfor %}
+</div>
+<div style="padding: 0 4%">
+    <div class="card be-social">
+        <p class="bold">{{localization.wiasi}}</p>
+        <p class="social">
+            <a href="" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        </p>
+        <p class="tag">#E-Shop</p>
+        <p>{{localization.wiasidesc}} #E-Shop</p>
+        <p><a href="#">{{localization.seegal}}</a></p>
+    </div>
+</div>
+<script>
+    var slideIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex].style.display = "block";
+        slideIndex++;
+        if (slideIndex >= x.length) { slideIndex = 0 }
+        setTimeout(carousel, 25000); // Change image every 2 seconds
+    }
+</script>
+    {% endblock %}

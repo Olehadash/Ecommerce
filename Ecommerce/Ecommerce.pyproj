@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>5705adf4-473e-4eb1-a586-519cae49f5be</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>runserver.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+    <Name>Ecommerce</Name>
+    <RootNamespace>Ecommerce</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Ecommerce\application.py" />
+    <Compile Include="Ecommerce\forms.py" />
+    <Compile Include="Ecommerce\models.py" />
+    <Compile Include="Ecommerce\routes.py" />
+    <Compile Include="runserver.py" />
+    <Compile Include="Ecommerce\__init__.py" />
+    <Compile Include="Ecommerce\views.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Ecommerce\" />
+    <Folder Include="instance\" />
+    <Folder Include="instance\images\" />
+    <Folder Include="instance\images\uploads\" />
+    <Folder Include="instance\images\uploads\products\" />
+    <Folder Include="Ecommerce\static\" />
+    <Folder Include="Ecommerce\static\content\" />
+    <Folder Include="Ecommerce\static\dashboard\" />
+    <Folder Include="Ecommerce\static\dashboard\assets\" />
+    <Folder Include="Ecommerce\static\dashboard\assets\css\" />
+    <Folder Include="Ecommerce\static\dashboard\assets\img\" />
+    <Folder Include="Ecommerce\static\dashboard\assets\img\faces\" />
+    <Folder Include="Ecommerce\static\dashboard\assets\js\" />
+    <Folder Include="Ecommerce\static\dashboard\assets\sass\" />
+    <Folder Include="Ecommerce\static\dashboard\assets\sass\md\" />
+    <Folder Include="Ecommerce\static\dashboard\assets\sass\md\mixins\" />
+    <Folder Include="Ecommerce\static\dashboard\assets\sass\md\plugins\" />
+    <Folder Include="Ecommerce\static\fonts\" />
+    <Folder Include="Ecommerce\static\scripts\" />
+    <Folder Include="Ecommerce\static\user\" />
+    <Folder Include="Ecommerce\static\user\css\" />
+    <Folder Include="Ecommerce\templates\" />
+    <Folder Include="Ecommerce\templates\dashboard\" />
+    <Folder Include="Ecommerce\templates\dashboard\html\" />
+    <Folder Include="Ecommerce\templates\dashboard\html\product\" />
+    <Folder Include="Ecommerce\templates\dashboard\html\review\" />
+    <Folder Include="Ecommerce\templates\email\" />
+    <Folder Include="Ecommerce\templates\product\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ecommerce\templates\dashboard\html\category.html" />
+    <Content Include="instance\images\uploads\products\03March181st.jpg" />
+    <Content Include="instance\images\uploads\products\03March184th.jpg" />
+    <Content Include="instance\images\uploads\products\11th.jpg" />
+    <Content Include="instance\images\uploads\products\Thumbs.db" />
+    <Content Include="Ecommerce\LICENCE" />
+    <Content Include="Ecommerce\README.md" />
+    <Content Include="Ecommerce\shop.db" />
+    <Content Include="Ecommerce\static\.htaccess" />
+    <Content Include="Ecommerce\static\dashboard\assets\css\bootstrap.min.css" />
+    <Content Include="Ecommerce\static\dashboard\assets\css\demo.css" />
+    <Content Include="Ecommerce\static\dashboard\assets\css\material-dashboard.css" />
+    <Content Include="Ecommerce\static\dashboard\assets\img\apple-icon.png" />
+    <Content Include="Ecommerce\static\dashboard\assets\img\cover.jpeg" />
+    <Content Include="Ecommerce\static\dashboard\assets\img\faces\marc.jpg" />
+    <Content Include="Ecommerce\static\dashboard\assets\img\favicon.png" />
+    <Content Include="Ecommerce\static\dashboard\assets\img\mask.png" />
+    <Content Include="Ecommerce\static\dashboard\assets\img\new_logo.png" />
+    <Content Include="Ecommerce\static\dashboard\assets\img\sidebar-1.jpg" />
+    <Content Include="Ecommerce\static\dashboard\assets\img\sidebar-2.jpg" />
+    <Content Include="Ecommerce\static\dashboard\assets\img\sidebar-3.jpg" />
+    <Content Include="Ecommerce\static\dashboard\assets\img\sidebar-4.jpg" />
+    <Content Include="Ecommerce\static\dashboard\assets\img\tim_80x80.png" />
+    <Content Include="Ecommerce\static\dashboard\assets\js\arrive.min.js" />
+    <Content Include="Ecommerce\static\dashboard\assets\js\bootstrap-notify.js" />
+    <Content Include="Ecommerce\static\dashboard\assets\js\bootstrap.min.js" />
+    <Content Include="Ecommerce\static\dashboard\assets\js\chartist.min.js" />
+    <Content Include="Ecommerce\static\dashboard\assets\js\demo.js" />
+    <Content Include="Ecommerce\static\dashboard\assets\js\jquery-3.2.1.min.js" />
+    <Content Include="Ecommerce\static\dashboard\assets\js\material-dashboard.js" />
+    <Content Include="Ecommerce\static\dashboard\assets\js\material.min.js" />
+    <Content Include="Ecommerce\static\dashboard\assets\js\perfect-scrollbar.jquery.min.js" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\material-dashboard.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\mixins\_chartist.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\mixins\_transparency.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\mixins\_vendor-prefixes.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\plugins\_animate.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\plugins\_perfect-scrollbar.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\plugins\_plugin-nouislider.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_alerts.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_buttons.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_cards.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_chartist.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_checkboxes.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_colors.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_dialogs.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_dropdown.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_footers.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_forms.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_inputs-size.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_inputs.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_misc.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_mixins.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_navbars.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_pagination.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_pills.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_popups.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_radios.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_responsive.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_ripples.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_shadows.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_sidebar-and-main-panel.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_tables.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_tabs.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_togglebutton.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_typography.scss" />
+    <Content Include="Ecommerce\static\dashboard\assets\sass\md\_variables.scss" />
+    <Content Include="Ecommerce\static\favicon.ico" />
+    <Content Include="Ecommerce\static\sitemap.xml" />
+    <Content Include="Ecommerce\static\sw.js" />
+    <Content Include="Ecommerce\static\turbo.js" />
+    <Content Include="Ecommerce\static\user\css\style.css" />
+    <Content Include="Ecommerce\static\user\css\stylesource.css" />
+    <Content Include="Ecommerce\templates\404.html" />
+    <Content Include="Ecommerce\templates\about.html" />
+    <Content Include="Ecommerce\templates\cart.html" />
+    <Content Include="Ecommerce\templates\change-password.html" />
+    <Content Include="Ecommerce\templates\checkout.html" />
+    <Content Include="Ecommerce\templates\contact.html" />
+    <Content Include="Ecommerce\templates\dashboard\html\banner.html" />
+    <Content Include="Ecommerce\templates\dashboard\html\comments.html" />
+    <Content Include="Ecommerce\templates\dashboard\html\dashboard.html" />
+    <Content Include="Ecommerce\templates\dashboard\html\edit-order.html" />
+    <Content Include="Ecommerce\templates\dashboard\html\layout.html" />
+    <Content Include="Ecommerce\templates\dashboard\html\maps.html" />
+    <Content Include="Ecommerce\templates\dashboard\html\orders.html" />
+    <Content Include="Ecommerce\templates\dashboard\html\product.html" />
+    <Content Include="Ecommerce\templates\dashboard\html\product\edit.html" />
+    <Content Include="Ecommerce\templates\dashboard\html\product\new.html" />
+    <Content Include="Ecommerce\templates\dashboard\html\reviews.html" />
+    <Content Include="Ecommerce\templates\dashboard\html\review\edit.html" />
+    <Content Include="Ecommerce\templates\dashboard\html\review\new.html" />
+    <Content Include="Ecommerce\templates\dashboard\html\typography.html" />
+    <Content Include="Ecommerce\templates\dashboard\html\upgrade.html" />
+    <Content Include="Ecommerce\templates\dashboard\html\user.html" />
+    <Content Include="Ecommerce\templates\email\cart.html" />
+    <Content Include="Ecommerce\templates\email\notification.html" />
+    <Content Include="Ecommerce\templates\email\password.html" />
+    <Content Include="Ecommerce\templates\email\register.html" />
+    <Content Include="Ecommerce\templates\index.html" />
+    <Content Include="Ecommerce\templates\index_boys.html" />
+    <Content Include="Ecommerce\templates\index_girls.html" />
+    <Content Include="Ecommerce\templates\login.html" />
+    <Content Include="Ecommerce\templates\macros.html" />
+    <Content Include="Ecommerce\templates\product\index.html" />
+    <Content Include="Ecommerce\templates\register.html" />
+    <Content Include="Ecommerce\templates\reset.html" />
+    <Content Include="Ecommerce\templates\reset_with_token.html" />
+    <Content Include="Ecommerce\templates\return.html" />
+    <Content Include="Ecommerce\templates\reviews.html" />
+    <Content Include="Ecommerce\templates\search.html" />
+    <Content Include="Ecommerce\templates\template.html" />
+    <Content Include="Ecommerce\templates\thanks.html" />
+    <Content Include="Ecommerce\templates\user-macros.html" />
+    <Content Include="Ecommerce\templates\user-profile.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="Ecommerce\static\content\bootstrap.css" />
+    <Content Include="Ecommerce\static\content\bootstrap.min.css" />
+    <Content Include="Ecommerce\static\content\site.css" />
+    <Content Include="Ecommerce\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Ecommerce\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Ecommerce\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Ecommerce\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Ecommerce\static\scripts\bootstrap.js" />
+    <Content Include="Ecommerce\static\scripts\bootstrap.min.js" />
+    <Content Include="Ecommerce\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Ecommerce\static\scripts\jquery-1.10.2.js" />
+    <Content Include="Ecommerce\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="Ecommerce\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="Ecommerce\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Ecommerce\static\scripts\jquery.validate.js" />
+    <Content Include="Ecommerce\static\scripts\jquery.validate.min.js" />
+    <Content Include="Ecommerce\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Ecommerce\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Ecommerce\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="Ecommerce\static\scripts\respond.js" />
+    <Content Include="Ecommerce\static\scripts\respond.min.js" />
+    <Content Include="Ecommerce\static\scripts\_references.js" />
+    <Content Include="shop.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.8</Version>
+      <Description>env (Python 3.8 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
