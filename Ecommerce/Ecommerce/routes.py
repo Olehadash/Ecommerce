@@ -363,7 +363,8 @@ def page_not_found(e):
 @login_required
 def dashboard():
     if current_user.is_admin:
-        return render_template("dashboard/html/dashboard.html", user=current_user)
+        #return render_template("dashboard/html/dashboard.html", user=current_user)
+        return render_template("dashboard/html/user.html", user=current_user, data=models.User)
     else:
         return redirect(url_for('index'))
 

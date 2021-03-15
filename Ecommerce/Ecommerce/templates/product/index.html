@@ -48,7 +48,7 @@
                 </p>
                 <div class="button-group">
                     {% if product.count >= 1 %}
-                    <a class="btn btn-highlight" href="{{url_for('buy_now', product_id=product.id)}}" style="background-color:chocolate">Buy Now</a>
+                    <a class="btn btn-highlight" href="{{url_for('buy_now', product_id=product.id)}}" style="background-color:#FF8000">Buy Now</a>
                     {% else %}
 
                     {% endif %}
@@ -116,7 +116,7 @@
                 <option value="5">5</option>
             </select>
             <textarea name="review-text" id="" placeholder="{{localization.reviewcaption}}"></textarea>
-            <button type="submit" class="btn" style="background-color:chocolate">{{localization.submit}}</button>
+            <button type="submit" class="btn" style="background-color:#FF8000">{{localization.submit}}</button>
         </form>
     </div>
     {% if comments %}

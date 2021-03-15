@@ -19,7 +19,7 @@
                     </div>
                     <div class="card-content">
                         <h4 class="title">{{item.name}}</h4>
-                        <p class="category">₹ {{ (item.actual_price - item.actual_price * ( item.off_percent / 100)) }} <span><s>₹ {{item.actual_price}}</span></s><span class="text-success" style="font-weight: bold"> {{ item.off_percent }} % OFF</span> </p>
+                        <p class="category">$ {{ (item.actual_price - item.actual_price * ( item.off_percent / 100)) }} <span><s>$ {{item.actual_price}}</span></s><span class="text-success" style="font-weight: bold"> {{ item.off_percent }} % OFF</span> </p>
                     </div>
                     <div class="card-footer">
                         <a href="{{ url_for('dashboard_products_edit', id=item.id) }}" class="btn btn-primary">Edit</a>
